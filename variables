@@ -1,0 +1,267 @@
+   */
+     JFrame introFrame,menuFrame,carsFrame,motorsFrame
+             ,sedanFrame,SUVFrame,vanFrame
+             ,underboneFrame,scooterFrame
+             ,orderformFrame;
+     
+     JPanel backgroundMenu,backgroundCars,backgroundMotors,background
+             ,backgroundSedan,backgroundSUV,backgroundVan
+                     ,backgroundUnderbone,backgroundScooter
+             ,orderformBackground;
+     
+     JLabel backgroundgif,userlabel,passlabel,nameAccMenu,nameAccCars,nameAccMotors,nameAccSedan,nameAccSUV,nameAccVan,nameAccUnderbone,nameAccScooter,
+             logoMenu,carsLabel,showroomLogoCars,showroomLogoMotors
+             ,showroomsedanLogo,showroomSUVLogo,showroomvanLogo,showroomunderboneLogo,showroomscooterLogo,
+             motorsLabel,carsLogo,motorsLogo,carsTitle,motorsTitle,sedanLabel,
+             SUVLabel,vanLabel,underboneLabel,scooterLabel
+             ,civicName,civicpriceText,civictransmissionPick,viosName,viospriceText,viostransmissionPick
+             ,civicaddFee,viosaddFee
+             ,monteroName,monteropriceText,monterotransmissionPick,crvName,crvpriceText,crvtransmissionPick
+             ,monteroaddFee,crvaddFee
+             ,hiaceName,hiacepriceText,hiacetransmissionPick,chevyName,chevypriceText,chevytransmissionPick
+             ,hiaceaddFee,chevyaddFee
+             ,orderformLogo,totalText,vatText,discountText,gtamountText,amounttenderedText,changeText;
+     
+     String transmissionpickCivic,transmissionpickVios,transmissionpickMontero,transmissionpickCrv,transmissionpickHiace,transmissionpickChevy;
+     
+     JButton logo,loginButton,motors,cars,backbuttonCars,backbuttonMotors,sedanLogo,SUVLogo,vanLogo,underboneLogo,scooterLogo
+             ,backbuttonSedan,backbuttonSUV,backbuttonVan,backbuttonUnderbone,backbuttonScooter
+             ,civicsedanButton,viossedanButton,civicbuyButton,civicconfirmButton,viosconfirmButton,viosbuyButton
+             ,crvsuvButton,crvbuyButton,crvconfirmButton,monterosuvButton,monterobuyButton,monteroconfirmButton
+             ,hiacevanButton,hiacebuyButton,hiaceconfirmButton,chevyvanButton,chevybuyButton,chevyconfirmButton
+             ,homeButton,confirmorderButton;
+     
+     JTextArea civicDescription,viosDescription
+             ,crvDescription,monteroDescription
+             ,hiaceDescription,chevyDescription;
+     
+     JRadioButton civicAutomatic,civicManual,viosAutomatic,viosManual,
+             monteroManual,monteroAutomatic,crvManual,crvAutomatic,
+             hiaceAutomatic,hiaceManual,chevyManual,chevyAutomatic;
+     
+     
+     ButtonGroup bg;
+     
+     JTable orderForm;
+     
+     JScrollPane j;
+             
+     ImageIcon imagelogo;
+     
+     JTextField user
+             ,totalTextfield,vatTextfield,discountTextfield,gtaTextfield,amounttenderedTextfield,changeTextfield;
+     
+     JPasswordField pass;
+     
+     String username,password;
+     
+     String[] columnNames= {"Name","Quantity","Price","Transmission","Additional Fees"};
+    String[][] data= {{"","","","",""}};
+    
+    JLabel nameTable,quantityTable,transmissionTable,addfeesTable,priceTable;
+    
+    theShowroom(){
+    //the account
+    username= "customer1";
+    password= "password";
+    
+    
+   //WELCOME Frame Variables
+    introFrame= new JFrame("Welcome");
+    backgroundgif=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\background720p.gif"));
+    logo=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent4.png"));
+    userlabel=new JLabel("USERNAME: ");
+    passlabel=new JLabel("PASSWORD: ");
+    user=new JTextField("");
+    pass=new JPasswordField("");
+    loginButton=new JButton("Login");
+    
+    //menuFrame Variables
+    menuFrame=new JFrame("Menu");
+    backgroundMenu= new JPanel();
+    nameAccMenu=new JLabel(username);
+    carsLabel=new JLabel("CARS");
+    motorsLabel=new JLabel("MOTORCYCLES");
+    carsLogo=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\traffic-jam240p.png"));
+    motorsLogo=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\motorcycle240p.png"));
+    logoMenu=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+    motors=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\motorcycle240p.png"));
+    cars=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\traffic-jam240p.png"));
+    
+    //carsFrame Variables
+    carsFrame=new JFrame("Cars");
+    backgroundCars=new JPanel();
+    nameAccCars=new JLabel(username);
+    carsTitle=new JLabel("CARS");
+    sedanLabel=new JLabel("Sedan");
+    SUVLabel=new JLabel("SUV");
+    vanLabel=new JLabel("Van");
+    showroomLogoCars=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+    sedanLogo=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\sedan.png"));
+    SUVLogo=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\suv.png"));
+    vanLogo=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\van.png"));
+    backbuttonCars=new JButton("BACK");
+    
+    //sedanFrame
+    sedanFrame=new JFrame("Sedan(CARS)");
+    backgroundSedan=new JPanel();
+    nameAccSedan=new JLabel(username);
+    backbuttonSedan=new JButton("BACK");
+    showroomsedanLogo=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+    
+    civicsedanButton=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\civicresize.png"));
+    civicName= new JLabel("Phoenix Chevel");
+    civicDescription=new JTextArea("A compact sedan that'll fit your taste."
+            +"\n With comfortable seats and cool exterior \n design and a"
+            + " V8 Engine + Turbo. AWD \n"
+            + "Default Transmission: Automatic"); 
+    civicpriceText=new JLabel("P1,250,000");
+    civictransmissionPick=new JLabel("Transmission: ");
+    civicbuyButton=new JButton("BUY");
+    civicconfirmButton=new JButton("CONFIRM");
+    civicAutomatic=new JRadioButton("Default");
+    civicManual=new JRadioButton("Manual");
+    civicaddFee=new JLabel("+ P100,000");
+    bg=new ButtonGroup();
+    
+    
+   
+    viossedanButton=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\viosresize.png"));
+    viosName=new JLabel("Olets Loco");
+    viosDescription=new JTextArea("A budget sedan that fits for all your necessities \n"
+            + "2.8mAL, CTEC Engine that goes up to 250hp. RWD \n "
+            + "Defaul Transmission: Manual");
+    viospriceText=new JLabel("P985,999");
+    viostransmissionPick=new JLabel("Transmission: ");
+    viosbuyButton=new JButton("BUY");
+    viosconfirmButton=new JButton("CONFIRM");
+    viosAutomatic=new JRadioButton("Automatic");
+    viosManual=new JRadioButton("Default");
+    viosaddFee=new JLabel("+ P300,000");
+    
+    //SUVFrame
+    SUVFrame=new JFrame("SUV(CARS)");
+    backgroundSUV=new JPanel();
+    nameAccSUV=new JLabel(username);
+    backbuttonSUV=new JButton("BACK");
+    showroomSUVLogo=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+    
+    crvsuvButton=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\crvresize.png"));
+    crvName=new JLabel("Leech Behembra");
+    
+    crvDescription=new JTextArea("A compact little SUV that fits for your taste \n"
+            + "Deafult Transmission: Manual. AWD");
+    
+    crvpriceText=new JLabel("P1,350,000");
+    crvtransmissionPick=new JLabel("Transmission: ");
+    crvManual=new JRadioButton("Default");
+    crvAutomatic=new JRadioButton("Automatic");
+    crvaddFee=new JLabel("+P300,000");
+    crvbuyButton=new JButton("BUY");
+    crvconfirmButton=new JButton("CONFIRM");
+    
+    
+    
+    monterosuvButton=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\monteroresize.png"));
+    monteroName= new JLabel("Toru Runeterra");
+    
+    monteroDescription= new JTextArea("A sporty SUV that'll let you enjoy the ride \n"
+            + "Default Transmission: Automatic. AWD ");
+    
+    monteropriceText=new JLabel("P1,500,000");
+    monterotransmissionPick=new JLabel("Transmission: ");
+    monteroaddFee=new JLabel("+P150,000");
+    monteroManual=new JRadioButton("Manual");
+    monteroAutomatic=new JRadioButton("Default");
+    monterobuyButton=new JButton("BUY");
+    monteroconfirmButton=new JButton("CONFIRM");
+            
+    //vanFrame
+     vanFrame=new JFrame("Van(CARS)");
+    backgroundVan=new JPanel();
+    nameAccVan=new JLabel(username);
+    backbuttonVan=new JButton("BACK");
+    showroomvanLogo=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+    
+    hiacevanButton=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\hiaceresize.png"));
+    hiaceName=new JLabel("Nocan Graviole");
+    
+    hiaceDescription=new JTextArea("A 18 seater Van that fit for your family and business \n"
+            + "Deafult Transmission: Automatic. AWD");
+    
+    hiacepriceText=new JLabel("P1,800,000");
+    hiacetransmissionPick=new JLabel("Transmission: ");
+    hiaceManual=new JRadioButton("Default");
+    hiaceAutomatic=new JRadioButton("Manual");
+    hiaceaddFee=new JLabel("+P150,000");
+    hiacebuyButton=new JButton("BUY");
+    hiaceconfirmButton=new JButton("CONFIRM");
+    
+    
+    
+    chevyvanButton=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\chevyvanresize.png"));
+    chevyName= new JLabel("Vyegrol Munch");
+    
+    chevyDescription= new JTextArea("A Van that'll suit for any kind of business \n"
+            + "Default Transmission: Automatic. RWD ");
+    
+    chevypriceText=new JLabel("P1,500,000");
+    chevytransmissionPick=new JLabel("Transmission: ");
+    chevyaddFee=new JLabel("+P150,000");
+    chevyManual=new JRadioButton("Manual");
+    chevyAutomatic=new JRadioButton("Default");
+    chevybuyButton=new JButton("BUY");
+    chevyconfirmButton=new JButton("CONFIRM");
+            
+    
+    //motorsFrame Variables
+    motorsFrame=new JFrame("Motorcycles");
+    motorsTitle=new JLabel("MOTORCYCLES");
+    nameAccMotors=new JLabel(username);
+    backgroundMotors=new JPanel();
+    underboneLabel=new JLabel("Underbone");
+    scooterLabel=new JLabel("Scooter");
+    showroomLogoMotors=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+    backbuttonMotors=new JButton("BACK");
+    underboneLogo=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\underbone.png"));
+    scooterLogo=new JButton(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\motorcycle240p.png"));
+    
+    //underboneFrame Variables
+    underboneFrame=new JFrame("Underbone(MOTORCYCLES)");
+    backgroundUnderbone=new JPanel();
+    nameAccUnderbone=new JLabel(username);
+    backbuttonUnderbone=new JButton("BACK");
+    showroomunderboneLogo=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+    
+    //scooterFrame Variables
+    scooterFrame=new JFrame("Scooter(MOTORCYCLES)");
+    backgroundScooter=new JPanel();
+    nameAccScooter=new JLabel(username);
+    backbuttonScooter=new JButton("BACK");
+    showroomscooterLogo=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+   
+    //orderForm Frame Variables
+    orderformFrame= new JFrame("Order Summary");
+    orderformBackground= new JPanel();
+    orderformLogo=new JLabel(new ImageIcon("C:\\Users\\jrvil\\Documents\\NetBeansProjects\\theShowroom\\src\\theshowroom\\logotransparent144p.png"));
+    orderForm=new JTable(data, columnNames);
+    nameTable=new JLabel("NAME");
+    quantityTable=new JLabel("QUANTITY");
+    transmissionTable=new JLabel("TRANSMISSION");
+    addfeesTable=new JLabel("ADDITIONAL FEES");
+    priceTable=new JLabel("PRICE");
+    homeButton=new JButton("Home");
+    totalText=new JLabel("Total: ");
+    vatText=new JLabel("VAT: ");
+    discountText=new JLabel("Discount: ");
+    gtamountText=new JLabel("Total Amount: ");
+    amounttenderedText=new JLabel("Payment Amount: ");
+    changeText=new JLabel("Change: ");
+    confirmorderButton=new JButton("CONFIRM");
+    totalTextfield=new JTextField();    
+    vatTextfield=new JTextField();
+    discountTextfield=new JTextField();
+    gtaTextfield=new JTextField();
+    amounttenderedTextfield=new JTextField();
+    changeTextfield=new JTextField();
+    
