@@ -1,0 +1,71 @@
+hiacevanButton.setBounds(250,160,256,85);
+    hiacevanButton.setOpaque(false);
+    hiacevanButton.setContentAreaFilled(false);
+    hiacevanButton.setBorderPainted(false);
+    backgroundVan.add(hiacevanButton);
+    
+    hiaceName.setBounds(310,220,200,100);
+    hiaceName.setFont(new Font("Arial",Font.BOLD,18));
+    hiaceName.setForeground(Color.BLACK);
+    hiaceName.setVisible(true);
+    backgroundVan.add(hiaceName);
+    
+    hiaceDescription.setBounds(260,290,300,50);
+    hiaceDescription.setFont(new Font("Arial",Font.BOLD,12));
+    hiaceDescription.setForeground(Color.BLACK);
+    hiaceDescription.setLineWrap(true);
+    hiaceDescription.setWrapStyleWord(true);
+    hiaceDescription.setBackground(Color.GRAY);
+    hiaceDescription.setVisible(true);
+    hiaceDescription.setEditable(false);
+    backgroundVan.add(hiaceDescription);
+    
+    hiacepriceText.setBounds(350,300,200,100);
+    hiacepriceText.setFont(new Font("Arial",Font.BOLD,25));
+    hiacepriceText.setForeground(Color.BLACK);
+    hiacepriceText.setVisible(true);
+    backgroundVan.add(hiacepriceText); 
+    
+    hiacetransmissionPick.setBounds(220,330,200,100);
+    hiacetransmissionPick.setFont(new Font("Arial",Font.BOLD,15));
+    hiacetransmissionPick.setForeground(Color.BLACK);
+    hiacetransmissionPick.setVisible(true);
+    backgroundVan.add(hiacetransmissionPick);
+    
+    hiaceAutomatic.setBounds(350,365,100,30);
+    hiaceAutomatic.setOpaque(false);
+    hiaceAutomatic.setContentAreaFilled(false);
+    hiaceAutomatic.setBorderPainted(false);
+    hiaceAutomatic.setVisible(true);
+    bg.add(hiaceAutomatic);
+    backgroundVan.add(hiaceAutomatic);
+    
+    hiaceManual.setBounds(430,365,100,30);
+    hiaceManual.setOpaque(false);
+    hiaceManual.setContentAreaFilled(false);
+    hiaceManual.setBorderPainted(false);
+    hiaceManual.setVisible(true);
+    bg.add(hiaceManual);
+    backgroundVan.add(hiaceManual);
+    
+    hiaceaddFee.setBounds(460,350,200,100);
+    hiaceaddFee.setFont(new Font("Arial",Font.BOLD,10));
+    hiaceaddFee.setForeground(Color.BLACK);
+    hiaceaddFee.setVisible(true);
+    backgroundVan.add(hiaceaddFee);
+    
+    hiacebuyButton.setBounds(430,430,100,30);
+    hiacebuyButton.setOpaque(false);
+    hiacebuyButton.setContentAreaFilled(false);
+    hiacebuyButton.setBorderPainted(false);
+    hiacebuyButton.setVisible(true);
+    hiacebuyButton.setForeground(Color.BLACK);
+    backgroundVan.add(hiacebuyButton);
+    
+    hiaceconfirmButton.setBounds(430,430,100,30);
+    hiaceconfirmButton.setOpaque(false);
+    hiaceconfirmButton.setContentAreaFilled(false);
+    hiaceconfirmButton.setBorderPainted(false);
+    hiaceconfirmButton.setVisible(true);
+    hiaceconfirmButton.setForeground(Color.BLACK);
+    backgroundVan.add(hiaceconfirmButton);
